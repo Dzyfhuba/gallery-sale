@@ -7,6 +7,7 @@ use App\Models\User;
 use Dzyfhuba\PostSys\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class ArticleController extends Controller
 {
@@ -65,9 +66,13 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($title)
     {
-        //
+        $title = Str::title(str_replace('-', ' ', $title));
+        $post = Post::where('title', $title)->first();
+        return view('admin.article.show', [
+            'post' => $post
+        ]);
     }
 
     /**
@@ -115,5 +120,15 @@ class ArticleController extends Controller
             'status' => 'success',
             'message' => $post->title . ' article deleted successfully!'
         ]);
+    }
+
+    public function toggleStatus($id, $status)
+    {
+        $post = Post::find($id);
+        $post->update([
+            'status' => $status
+        ]);
+        $post = Post::find($id);
+        return response()->json($post);
     }
 }

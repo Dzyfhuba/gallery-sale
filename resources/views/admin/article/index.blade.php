@@ -28,7 +28,7 @@
                             @foreach ($posts as $post)
                                 <tr>
                                     <td class="d-none" scope="row">{{ $post->id }}</td>
-                                    <td onclick="window.location='{{ route('admin.article.show', $post->id) }}'"
+                                    <td onclick="window.location='{{ route('admin.article.show', Str::slug($post->title)) }}'"
                                         id="title">
                                         {{ $post->title }}</td>
                                     <td class="d-none">{{ $post->status }}</td>
@@ -44,9 +44,9 @@
                                     </td>
                                     <td class="text-center">
                                         <div class="d-grid gap-2">
-                                            <button type="button" name="visible" id="visible" class="btn btn-light"
+                                            <button type="button" name="visible" id="visible" class="btn border-dark"
                                                 data-id="{{ $post->id }}" data-status="{{ $post->status }}">
-                                                <i class="bi bi-eye"></i>
+                                                <i class="bi{{ $post->status ? ' bi-eye' : ' bi-eye-slash' }}"></i>
                                             </button>
                                         </div>
                                     </td>
@@ -69,11 +69,25 @@
     <button id="test" data-id="asd">asdas</button>
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
     <script>
-        $('button#visible').on('click', function () {
-            console.log($(this).data('id'));
-            console.log($(this).data('status'));
-            // $(this).removeClass('')
-
+        $(function() {
+            $('button#visible').each(function() {
+                if($(this).data('status')){
+                    $(this).addClass('btn-light');
+                } else {
+                    $(this).addClass('btn-dark');
+                }
+            });
+        });
+        $('button#visible').on('click', function() {
+            $(this).toggleClass('btn-light');
+            $(this).children('i').toggleClass('bi-eye-slash');
+            $(this).toggleClass('btn-dark');
+            $(this).children('i').toggleClass('bi-eye');
+            $(this).data('status') ? $(this).data('status', 0) : $(this).data('status', 1);
+            id = $(this).data('id');
+            status = $(this).data('status');
+            console.log($(this).children("i").attr('class'));
+            $.get(`/admin/article/status/${id}/${status}`);
         })
     </script>
 @endsection

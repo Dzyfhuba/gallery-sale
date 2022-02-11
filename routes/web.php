@@ -23,8 +23,10 @@ Route::get('article', [AdminArticleController::class, 'index']);
 
 
 Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->group(function () {
-    Route::get('/', function(){
+    Route::get('/', function () {
         return redirect()->route('admin.article.index');
     })->name('dashboard');
+
     Route::resource('article', AdminArticleController::class);
+    Route::get('article/status/{id}/{status}', [AdminArticleController::class, 'toggleStatus']);
 });
