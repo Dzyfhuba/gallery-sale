@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Gallery Sale 👋</h1>
+<h1 align="center">Gallery Sale 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-v0.1-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/Dzyfhuba/gallery-sale/blob/main/LICENSE" target="_blank">
