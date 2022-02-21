@@ -65,13 +65,11 @@
             </div>
         </div>
     </div>
-    <button id="test" data-id="10">asdas</button>
-    <button id="test" data-id="asd">asdas</button>
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
     <script>
         $(function() {
             $('button#visible').each(function() {
-                if($(this).data('status')){
+                if ($(this).data('status')) {
                     $(this).addClass('btn-light');
                 } else {
                     $(this).addClass('btn-dark');

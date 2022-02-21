@@ -1,8 +1,15 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
 // Variables
 @import 'variables';
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+// Bootstrap Icons
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+// Pallete Colors
+@import './pallete.scss';
+// Color Theme
+@import './color_theme.scss';
+@import '~datatables.net-dt';
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');

@@ -22,7 +22,7 @@ class PostSeeder extends Seeder
             $post = Post::create([
                 'title' => substr(Str::title($faker->unique()->sentence()), 0, -1),
                 'description' => $faker->realText(),
-                'status' => 1
+                'status' => rand(0, 1),
             ]);
             $user = User::where('username', 'hafidz21ub')->first();
 

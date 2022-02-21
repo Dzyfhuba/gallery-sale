@@ -1,0 +1,18 @@
+/* SCSS RGB */
+
+$cultured: rgba(238, 238, 238, 1);
+$caribbean-green: rgba(79, 204, 163, 1);
+$charcoal: rgba(58, 63, 71, 1);
+$gunmetal: rgba(36, 42, 50, 1);
+
+/* SCSS Gradient */
+
+$gradient-top: linear-gradient(0deg, #eeeeeeff, #4fcca3ff, #3a3f47ff, #242a32ff);
+$gradient-right: linear-gradient(90deg, #eeeeeeff, #4fcca3ff, #3a3f47ff, #242a32ff);
+$gradient-bottom: linear-gradient(180deg, #eeeeeeff, #4fcca3ff, #3a3f47ff, #242a32ff);
+$gradient-left: linear-gradient(270deg, #eeeeeeff, #4fcca3ff, #3a3f47ff, #242a32ff);
+$gradient-top-right: linear-gradient(45deg, #eeeeeeff, #4fcca3ff, #3a3f47ff, #242a32ff);
+$gradient-bottom-right: linear-gradient(135deg, #eeeeeeff, #4fcca3ff, #3a3f47ff, #242a32ff);
+$gradient-top-left: linear-gradient(225deg, #eeeeeeff, #4fcca3ff, #3a3f47ff, #242a32ff);
+$gradient-bottom-left: linear-gradient(315deg, #eeeeeeff, #4fcca3ff, #3a3f47ff, #242a32ff);
+$gradient-radial: radial-gradient(#eeeeeeff, #4fcca3ff, #3a3f47ff, #242a32ff);

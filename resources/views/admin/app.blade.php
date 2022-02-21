@@ -31,27 +31,31 @@
                         <ul
                             class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between w-100 px-3 align-items-center">
                             <li class="nav-item">
-                                <a href="{{ route('admin.article.index') }}" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
-                                    data-bs-placement="right" data-bs-original-title="Artikel">
+                                <a href="{{ route('admin.article.index') }}" class="nav-link py-3 px-2" title=""
+                                    data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Artikel">
                                     <i class="bi bi-file-earmark-text fs-1"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
-                                    data-bs-placement="right" data-bs-original-title="Orders">
-                                    <i class="bi bi-file-earmark-person fs-1"></i>
+                                    data-bs-placement="right" data-bs-original-title="Galeri">
+                                    <i class="bi bi-images fs-1"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
-                                    data-bs-placement="right" data-bs-original-title="Products">
-                                    <i class="bi-heart fs-1"></i>
+                                    data-bs-placement="right" data-bs-original-title="Tukang Taman">
+                                    <span class="material-icons-outlined fs-1">
+                                        yard
+                                    </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
-                                    data-bs-placement="right" data-bs-original-title="Customers">
-                                    <i class="bi-people fs-1"></i>
+                                    data-bs-placement="right" data-bs-original-title="Kontak Kami">
+                                    <span class="material-icons-outlined fs-1">
+                                        contacts
+                                    </span>
                                 </a>
                             </li>
                             <li>
