@@ -5,7 +5,7 @@ const editor = new Editor({
     el: document.querySelector('#area'),
     height: '85vh',
     initialValue: 'content',
-    initialEditType: 'wysiwyg'
+    initialEditType: 'wysiwyg',
 });
 
 $(function() {
