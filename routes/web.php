@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ArticleController as AdminArticleController;
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -19,7 +20,11 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('article', [AdminArticleController::class, 'index']);
+
+Route::controller(ArticleController::class)->name('article.')->prefix('article')->group(function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/{title}', 'show')->name('show');
+});
 
 
 Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->group(function () {

@@ -23,7 +23,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <style>
-        .toastui-editor-popup-add-image .tab-item:fi {
+        .toastui-editor-popup-add-image .tab-item:first {
             display: none;
         }
 

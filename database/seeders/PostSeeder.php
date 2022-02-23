@@ -21,7 +21,7 @@ class PostSeeder extends Seeder
             $faker = Faker::create();
             $post = Post::create([
                 'title' => substr(Str::title($faker->unique()->sentence()), 0, -1),
-                'description' => $faker->realText(1000),
+                'description' => "![](https://i.redd.it/kve1klfujsf41.jpg)\n" . $faker->realText(1000),
                 'status' => rand(0, 1),
             ]);
             $user = User::where('username', 'hafidz21ub')->first();

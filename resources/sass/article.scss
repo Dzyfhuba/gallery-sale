@@ -1,0 +1,23 @@
+#article .img-thumbnail {
+    max-height: 30vh;
+    object-fit: cover;
+    width: 100%;
+}
+
+article {
+    margin-bottom: 25px;
+}
+
+article a {
+    text-decoration: none;
+    color: black;
+}
+
+article p {
+    font-size: medium;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+}

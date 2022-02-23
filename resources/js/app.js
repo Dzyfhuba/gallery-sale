@@ -15,5 +15,7 @@ require('./admin/command');
 
 import { slugify } from './slugify';
 
-if (window.location.href.includes(slugify($('title').text()).replace('-alam-rohman-garden', '')))
+if (window.location.href.includes(slugify($('title').text()).replace('-alam-rohman-garden', ''))) {
     require('./read-markdown');
+}
+require('./preview-markdown');

@@ -26,7 +26,7 @@
                     <a class="nav-link" href="">{{ __('Gallery') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">{{ __('Artikel') }}</a>
+                    <a class="nav-link" href="{{ route('article.index') }}">{{ __('Artikel') }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="">{{ __('Kontak Kami') }}</a>
@@ -60,7 +60,7 @@
                                 {{ __('Admin Page') }}
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                             document.getElementById('logout-form').submit();">
+                                                                         document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
 

@@ -13574,3 +13574,27 @@ table.dataTable td {
     margin-top: 0.5em;
   }
 }
+#article .img-thumbnail {
+  max-height: 30vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+article {
+  margin-bottom: 25px;
+}
+
+article a {
+  text-decoration: none;
+  color: black;
+}
+
+article p {
+  font-size: medium;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+}
