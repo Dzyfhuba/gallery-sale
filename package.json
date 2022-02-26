@@ -27,6 +27,7 @@
         "datatables.net": "^1.11.4",
         "datatables.net-dt": "^1.11.4",
         "jquery": "^3.6.0",
-        "tui-editor": "^1.4.10"
+        "tui-editor": "^1.4.10",
+        "viewerjs": "^1.10.4"
     }
 }

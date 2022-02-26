@@ -4,10 +4,8 @@
     <link rel="stylesheet" href="{{ asset('css/pointer-row.css') }}">
     <div class="container-xl">
         <div class="card">
-            <div class="card-header">
-                <h1>Artikel</h1>
-            </div>
             <div class="card-body">
+                <h1 class="card-title">Artikel</h1>
                 <a href="{{ route('admin.article.create') }}" class="btn btn-success w-100">Tambah Artikel</a>
                 <div class="row p-3 table-responsive">
                     <table id="data" class="table table-light table-striped table-hover table-bordered">

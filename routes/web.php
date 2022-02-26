@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\Admin\ArticleController as AdminArticleController;
+use App\Http\Controllers\Admin\GalleryController as AdminGalleryController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\GalleryController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -20,8 +22,12 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
 Route::controller(ArticleController::class)->name('article.')->prefix('article')->group(function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/{title}', 'show')->name('show');
+});
+
+Route::controller(GalleryController::class)->name('gallery.')->prefix('gallery')->group(function () {
     Route::get('/', 'index')->name('index');
     Route::get('/{title}', 'show')->name('show');
 });
@@ -34,4 +40,6 @@ Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->grou
 
     Route::resource('article', AdminArticleController::class);
     Route::get('article/status/{id}/{status}', [AdminArticleController::class, 'toggleStatus']);
+
+    Route::resource('gallery', AdminGalleryController::class);
 });

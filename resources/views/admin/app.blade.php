@@ -37,8 +37,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
-                                    data-bs-placement="right" data-bs-original-title="Galeri">
+                                <a href="{{ route('admin.gallery.index') }}" class="nav-link py-3 px-2" title=""
+                                    data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Galeri">
                                     <i class="bi bi-images fs-1"></i>
                                 </a>
                             </li>

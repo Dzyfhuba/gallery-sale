@@ -23,7 +23,7 @@
                     <a class="nav-link" href="">{{ __('Tukang Taman') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">{{ __('Gallery') }}</a>
+                    <a class="nav-link" href="{{ route('gallery.index') }}">{{ __('Gallery') }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('article.index') }}">{{ __('Artikel') }}</a>
@@ -59,8 +59,9 @@
                             <a class="dropdown-item" href="{{ route('admin.dashboard') }}">
                                 {{ __('Admin Page') }}
                             </a>
-                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                         document.getElementById('logout-form').submit();">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                                                 document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
 

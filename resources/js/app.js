@@ -1,7 +1,6 @@
 require('./bootstrap');
 window.$ = window.JQuery = require('jquery');
 require('datatables.net');
-
 require('./tooltip');
 
 require('./admin/data');
@@ -13,9 +12,18 @@ if (window.location.href.includes('create') ||
 
 require('./admin/command');
 
+// require('viewerjs');
+
 import { slugify } from './slugify';
 
 if (window.location.href.includes(slugify($('title').text()).replace('-alam-rohman-garden', ''))) {
     require('./read-markdown');
 }
-require('./preview-markdown');
+
+if (window.location.href.includes(`${window.location.origin}/article`)) {
+    require('./preview-markdown');
+}
+
+if (window.location.href.includes(`${window.location.origin}/admin/gallery`)) {
+    require('./gallery');
+}
