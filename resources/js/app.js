@@ -24,6 +24,9 @@ if (window.location.href.includes(`${window.location.origin}/article`)) {
     require('./preview-markdown');
 }
 
-if (window.location.href.includes(`${window.location.origin}/admin/gallery`)) {
+if (window.location.href.includes(`${window.location.origin}/gallery`)) {
     require('./gallery');
+}
+if (window.location.href.includes(`${window.location.origin}/admin/gallery`)) {
+    require('./admin/gallery-helper');
 }

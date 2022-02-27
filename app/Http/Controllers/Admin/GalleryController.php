@@ -97,6 +97,7 @@ class GalleryController extends Controller
      */
     public function destroy(Gallery $gallery)
     {
-        //
+        $gallery = Gallery::destroy($gallery->id);
+        return response()->json($gallery);
     }
 }

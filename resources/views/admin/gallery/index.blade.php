@@ -46,29 +46,20 @@
                     </div>
                 </div>
                 <div class="row" id="galleries">
-                    {{-- @foreach ($galleries as $key => $gallery)
+                    @foreach ($galleries as $key => $gallery)
                         <div class="col-md col-md-4 col-lg-3">
-                            <div class="card mb-3" id="gallery">
+                            <div class="card border-0 mb-3" id="gallery">
                                 <img src="{{ asset('storage/gallery/' . $gallery->image) }}" class="card-img-top"
                                     alt="{{ $gallery->title }}">
+                                <span id="delete" class="material-icons-outlined" data-id="{{ $gallery->id }}">
+                                    delete
+                                </span>
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $gallery->title }}</h5>
                                 </div>
                             </div>
                         </div>
-                    @endforeach --}}
-                    <!-- a block container is required -->
-                    <div>
-                        <img id="image" src="{{ asset('images/bam-hidden-floor.jpg') }}" alt="Picture">
-                    </div>
-
-                    <div>
-                        <ul id="images">
-                            <li><img src="{{ asset('images/bam-hidden-floor.jpg') }}" alt="Picture 1"></li>
-                            <li><img src="{{ asset('images/jue-viole-grace.jpg') }}" alt="Picture 2"></li>
-                            <li><img src="{{ asset('images/khun-eduan.jpg') }}" alt="Picture 3"></li>
-                        </ul>
-                    </div>
+                    @endforeach
                 </div>
                 {{ $galleries->links() }}
             </div>

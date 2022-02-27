@@ -14061,17 +14061,25 @@ article p {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  position: relative;
 }
 
-#gallery:hover {
+#gallery img:hover {
   cursor: pointer;
 }
 
-#gallery.show img {
-  position: fixed;
-  width: 80%;
-  height: 80%;
-  z-index: 9999;
-  transition: all 0.5s ease;
+#gallery #delete {
+  border-bottom-left-radius: 100%;
+  background-color: red;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  text-align: right;
+  font-size: 30px;
+}
+
+#delete:hover {
+  cursor: pointer;
 }
