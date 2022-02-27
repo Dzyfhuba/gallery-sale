@@ -30,3 +30,6 @@ if (window.location.href.includes(`${window.location.origin}/gallery`)) {
 if (window.location.href.includes(`${window.location.origin}/admin/gallery`)) {
     require('./admin/gallery-helper');
 }
+if (window.location.href.includes(`${window.location.origin}/admin/contactus`)) {
+    require('./admin/contactus');
+}

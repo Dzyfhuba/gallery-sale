@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ArticleController as AdminArticleController;
+use App\Http\Controllers\Admin\ContactUsController as AdminContactUsController;
 use App\Http\Controllers\Admin\GalleryController as AdminGalleryController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\GalleryController;
@@ -38,4 +39,6 @@ Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->grou
     Route::get('article/status/{id}/{status}', [AdminArticleController::class, 'toggleStatus']);
 
     Route::resource('gallery', AdminGalleryController::class);
+
+    Route::resource('contactus', AdminContactUsController::class);
 });

@@ -51,8 +51,9 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
-                                    data-bs-placement="right" data-bs-original-title="Kontak Kami">
+                                <a href="{{ route('admin.contactus.index') }}" class="nav-link py-3 px-2" title=""
+                                    data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-original-title="Kontak Kami">
                                     <span class="material-icons-outlined fs-1">
                                         contacts
                                     </span>

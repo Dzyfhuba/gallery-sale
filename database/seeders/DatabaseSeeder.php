@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\ContactUs;
 use App\Models\Gallery;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -17,6 +18,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        ContactUs::factory(1)->create();
         $this->call(RoleSeeder::class);
         $this->call(UserSeeder::class);
         User::factory(25)->create();
