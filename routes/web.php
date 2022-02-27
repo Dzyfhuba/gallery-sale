@@ -27,11 +27,7 @@ Route::controller(ArticleController::class)->name('article.')->prefix('article')
     Route::get('/{title}', 'show')->name('show');
 });
 
-Route::controller(GalleryController::class)->name('gallery.')->prefix('gallery')->group(function () {
-    Route::get('/', 'index')->name('index');
-    Route::get('/{title}', 'show')->name('show');
-});
-
+Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
 
 Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->group(function () {
     Route::get('/', function () {
