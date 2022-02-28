@@ -12,10 +12,9 @@ if (window.location.href.includes('create') ||
 
 require('./admin/command');
 
-// require('viewerjs');
+import { serialize } from './serialize';
 
 import { slugify } from './slugify';
-
 if (window.location.href.includes(slugify($('title').text()).replace('-alam-rohman-garden', ''))) {
     require('./read-markdown');
 }
@@ -32,4 +31,7 @@ if (window.location.href.includes(`${window.location.origin}/admin/gallery`)) {
 }
 if (window.location.href.includes(`${window.location.origin}/admin/contactus`)) {
     require('./admin/contactus');
+}
+if (window.location.href.includes(`${window.location.origin}/contactus`)) {
+    require('./contactus');
 }

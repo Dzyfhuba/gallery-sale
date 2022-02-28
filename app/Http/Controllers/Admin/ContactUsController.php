@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreContactUsRequest;
 use App\Http\Requests\UpdateContactUsRequest;
 use App\Models\ContactUs;
+use Illuminate\Support\Facades\Gate;
 
 class ContactUsController extends Controller
 {
@@ -73,10 +74,22 @@ class ContactUsController extends Controller
      * @param  \App\Models\ContactUs  $contactUs
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateContactUsRequest $request, ContactUs $contactUs)
+    public function update(UpdateContactUsRequest $request, $id)
     {
-        dd($request->all(), $contactUs);
-        // $contactUs->update($request->a)
+        $contactUs = ContactUs::find($id);
+        $contactUs->update([
+            'title' => $request->title,
+            'content' => $request->content,
+            'address' => $request->address,
+            'complete_address' => $request->complete_address,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'facebook' => $request->facebook,
+            'facebook_url' => $request->facebook_url,
+            'instagram' => $request->instagram,
+            'instagram_url' => $request->instagram_url,
+        ]);
+        return redirect()->route('admin.contactus.index')->with('success', 'Contact Us updated successfully.');
     }
 
     /**

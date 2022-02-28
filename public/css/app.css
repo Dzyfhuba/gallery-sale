@@ -14102,3 +14102,7 @@ article p {
   font-weight: bold;
   color: #212529;
 }
+
+#contactus article#content {
+  text-align: justify;
+}

@@ -20,12 +20,13 @@ class ContactUsFactory extends Factory
             'logo' => "alamrohmangarden.png",
             'title' => $this->faker->sentence,
             'content' => $this->faker->paragraphs(3, true),
-            'address' => $this->faker->address,
-            'coordinates' => $this->faker->latitude . ',' . $this->faker->longitude,
+            'address' => "Alam Rohman Garden",
             'phone' => $this->faker->phoneNumber,
             'email' => $this->faker->email,
-            'facebook' => $this->faker->url,
-            'instagram' => $this->faker->url,
+            'facebook' => $this->faker->userName,
+            'facebook_url' => $this->faker->url,
+            'instagram' => $this->faker->userName,
+            'instagram_url' => $this->faker->url,
         ];
     }
 }

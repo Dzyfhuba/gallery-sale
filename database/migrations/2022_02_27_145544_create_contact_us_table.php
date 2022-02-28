@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('title');
             $table->longText('content');
             $table->string('address');
-            $table->string('coordinates');
             $table->string('phone');
             $table->string('email');
             $table->string('facebook');

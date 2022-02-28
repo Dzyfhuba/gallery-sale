@@ -13,7 +13,7 @@ class ContactUs extends Model
         'title',
         'content',
         'address',
-        'coordinates',
+        'complete_address',
         'phone',
         'email',
         'facebook',

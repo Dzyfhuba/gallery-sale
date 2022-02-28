@@ -29,7 +29,7 @@
                     <a class="nav-link" href="{{ route('article.index') }}">{{ __('Artikel') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">{{ __('Kontak Kami') }}</a>
+                    <a class="nav-link" href="{{ route('contactus.index') }}">{{ __('Kontak Kami') }}</a>
                 </li>
             </ul>
 
@@ -61,7 +61,7 @@
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
-                                                                                 document.getElementById('logout-form').submit();">
+                                                                                     document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
 
