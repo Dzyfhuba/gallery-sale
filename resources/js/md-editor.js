@@ -3,7 +3,7 @@ import '@toast-ui/editor/dist/toastui-editor.css';
 
 const editor = new Editor({
     el: document.querySelector('#area'),
-    height: '85vh',
+    height: '70vh',
     initialValue: 'content',
     initialEditType: 'wysiwyg',
 });

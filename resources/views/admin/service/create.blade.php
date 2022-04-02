@@ -73,8 +73,8 @@
                         data-bs-target="#addImageModal">
                         <i class="bi bi-plus"></i> Tambah Gambar
                     </button>
-                    <div class="selected-image mb-3 overflow-scroll d-flex">
-
+                    <div class="selected-image mb-3 d-flex" style="overflow-x: scroll">
+                        <div>Klik gambar untuk menghapusnya dari daftar</div>
                     </div>
 
                     <!-- Modal -->
