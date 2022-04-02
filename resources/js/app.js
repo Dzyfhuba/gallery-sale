@@ -35,3 +35,6 @@ if (window.location.href.includes(`${window.location.origin}/admin/contactus`)) 
 if (window.location.href.includes(`${window.location.origin}/contactus`)) {
     require('./contactus');
 }
+if (window.location.href.includes(`${window.location.origin}/admin/service`)) {
+    require('./admin/service');
+}

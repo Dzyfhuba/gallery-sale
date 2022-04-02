@@ -44,7 +44,11 @@ php artisan migrate
 ```shell
 php artisan db:seed
 ```
-11. Run Laravel project
+11. connect storage to public
+```shell
+php artisan storage:link
+```
+12. Run Laravel project
 ```shell
 php artisan serve
 ```

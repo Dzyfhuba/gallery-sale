@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\ArticleController as AdminArticleController;
 use App\Http\Controllers\Admin\ContactUsController as AdminContactUsController;
 use App\Http\Controllers\Admin\GalleryController as AdminGalleryController;
+use App\Http\Controllers\ServiceController as AdminServiceController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\GalleryController;
@@ -44,4 +45,6 @@ Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->grou
     Route::resource('gallery', AdminGalleryController::class);
 
     Route::resource('contactus', AdminContactUsController::class);
+
+    Route::resource('service', AdminServiceController::class);
 });

@@ -21,6 +21,7 @@ class ContactUsFactory extends Factory
             'title' => $this->faker->sentence,
             'content' => $this->faker->paragraphs(3, true),
             'address' => "Alam Rohman Garden",
+            'complete_address' => "Jl. Kng Brotonegoro No.11, Yosowilangun, Kec. Manyar, Kabupaten Gresik, Jawa Timur 61151",
             'phone' => $this->faker->phoneNumber,
             'email' => $this->faker->email,
             'facebook' => $this->faker->userName,

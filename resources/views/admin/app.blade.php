@@ -60,8 +60,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
-                                    data-bs-placement="right" data-bs-original-title="Jasa">
+                                <a href="{{ route('admin.service.index') }}" class="nav-link py-3 px-2" title=""
+                                    data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Jasa">
                                     <span class="material-icons-outlined fs-1">
                                         work
                                     </span>

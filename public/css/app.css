@@ -14106,3 +14106,7 @@ article p {
 #contactus article#content {
   text-align: justify;
 }
+
+#serviceForm .image-item *:hover {
+  cursor: pointer;
+}
