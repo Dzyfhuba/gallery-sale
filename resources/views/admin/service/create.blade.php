@@ -106,7 +106,7 @@
                                                                     Card title
                                                                 </h5>
                                                             </div>
-                                                            <input type="checkbox" name="images" id="images"
+                                                            <input type="checkbox" name="images[]" id="images"
                                                                 value="{{ asset('images/gallery/' . $image->image) }}"
                                                                 class="position-absolute top-0 m-2" style="right: 0">
                                                         </div>
@@ -120,7 +120,7 @@
                         </div>
                     </div>
                     <!-- end create modal -->
-                    </ <textarea name="description" id="description" class="d-none"></textarea>
+                    <textarea name="description" id="description" class="d-none"></textarea>
                     <div id="area" class="bg-light"></div>
                 </div>
             </div>

@@ -43,7 +43,27 @@ class ServiceController extends Controller
      */
     public function store(StoreServiceRequest $request)
     {
-        //
+        $images = $request->input('images');
+        // get filename with the extension of all $images array
+        $filenames = array_map(function ($image) {
+            // get second part of the string after the last slash
+            return basename($image);
+        }, $images);
+
+        // $filenames to json
+        $filenames = json_encode($filenames);
+        // create a new service
+        $service = Service::create([
+            'title' => $request->title,
+            'description' => $request->description,
+            'images' => $filenames,
+            'status' => $request->status,
+        ]);
+
+        return redirect()->route('admin.service.index', [
+            'service' => $service,
+            'message' => 'Service created successfully',
+        ]);
     }
 
     /**

@@ -38,10 +38,14 @@ $(".selected-image").on('click', 'img', e => {
     }
 });
 
+$("#serviceForm input[type='submit']").on('click', e => {
+    alert("asd")
+});
+
 
 $(() => {
-    // add selected to .selected-image if 'selected' of local storage not an empty object of array
-    if (localStorage.getItem('selected') !== '{}' && localStorage.getItem('selected') !== '[]') {
+    // add selected to .selected-image if 'selected' of local storage not an empty object of array and setted
+    if (localStorage.getItem('selected') !== '{}' && localStorage.getItem('selected') !== '[]' && localStorage.getItem('selected')) {
         $("#serviceForm .selected-image").html('');
         JSON.parse(localStorage.getItem('selected')).forEach(src => {
             $("#serviceForm .selected-image").append(`
