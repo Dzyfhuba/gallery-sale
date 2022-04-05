@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\ContactUs;
 use App\Models\Gallery;
+use App\Models\Service;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\File;
@@ -31,5 +32,7 @@ class DatabaseSeeder extends Seeder
             echo "direktori sudah dibuat\n";
         }
         Gallery::factory(100)->create();
+
+        Service::factory(25)->create();
     }
 }

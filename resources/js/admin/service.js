@@ -35,6 +35,22 @@ $(".selected-image").on('click', 'img', e => {
         let selected = JSON.parse(localStorage.getItem('selected'));
         selected.splice(selected.indexOf($(e.target).attr('src')), 1);
         localStorage.setItem('selected', JSON.stringify(selected));
+
+        // remove selected value from input[type='checkbox']
+        $("#serviceForm input[type='checkbox']").each(function() {
+            if ($(this).val() == $(e.target).attr('src')) {
+                $(this).prop('checked', false);
+            }
+        });
+
+        // select input[type='checkbox'] from local storage
+        selected.forEach(src => {
+            $("#serviceForm input[type='checkbox']").each(function() {
+                if ($(this).val() == src) {
+                    $(this).prop('checked', true);
+                }
+            });
+        });
     }
 });
 

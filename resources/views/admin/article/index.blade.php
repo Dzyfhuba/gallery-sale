@@ -49,11 +49,16 @@
                                         </div>
                                     </td>
                                     <td class="text-center">
-                                        <a name="destroy" id="destroy" class="btn btn-danger" role="button"
-                                            data-target="{{ route('admin.article.destroy', $post->id) }}"
-                                            data-method="DELETE" data-disabled="true">
-                                            <i class="bi bi-trash"></i> Hapus
-                                        </a>
+                                        <form action="{{ route('admin.article.destroy', $post->id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" name="destroy" id="destroy" class="btn btn-danger"
+                                                role="button"
+                                                data-target="{{ route('admin.article.destroy', $post->id) }}"
+                                                data-method="DELETE" data-disabled="true">
+                                                <i class="bi bi-trash"></i> Hapus
+                                            </button>
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach
