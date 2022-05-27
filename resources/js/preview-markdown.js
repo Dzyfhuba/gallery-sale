@@ -13,7 +13,7 @@ $((() => {
         editor.setMarkdown($(el).val());
         // console.log(editor.getMarkdown());
         console.log($(el).html(editor.getHTML()));
-        $('.content')[i].innerHTML = editor.getHTML().replace(/<img[^>]*>/g, "").split('.', 1);
+        $('.content')[i].innerHTML = editor.getHTML().replace(/<img[^>]*>/g, "");
         // $('.content')[i].
     });
 }));

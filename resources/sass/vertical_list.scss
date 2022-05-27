@@ -1,0 +1,24 @@
+.list-vertical {
+    .card {
+        height: 150px;
+        flex-direction: column;
+        .img-thumbnail {
+            height: 150px;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            background-color: white;
+        }
+        .card-body {
+            width: 100%;
+        }
+        .card-text {
+            line-height: 1.5;
+            max-height: 3;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+        }
+    }
+}

@@ -14053,6 +14053,12 @@ article p {
 .content {
   display: flex;
   align-items: flex-start;
+  line-height: 1.5;
+  max-height: 3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 #gallery img {
@@ -14130,4 +14136,46 @@ article p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.list-vertical .card {
+  height: 150px;
+  flex-direction: column;
+}
+.list-vertical .card .img-thumbnail {
+  height: 150px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  background-color: white;
+}
+.list-vertical .card .card-body {
+  width: 100%;
+}
+.list-vertical .card .card-text {
+  line-height: 1.5;
+  max-height: 3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.card .card-img-400 {
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.btn-a {
+  padding: 10px;
+  background-color: #f5f5f5;
+  color: #000;
+  text-decoration: none;
+  font-size: 2em;
+  text-align: center;
 }

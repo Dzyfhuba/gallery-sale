@@ -10,8 +10,8 @@
                     @foreach ($galleries as $key => $gallery)
                         <div class="col-md col-md-4 col-lg-3">
                             <div class="card border-0 mb-3" id="gallery">
-                                <img src="{{ asset('images/gallery/' . $gallery->image) }}" class="card-img-top"
-                                    alt="{{ $gallery->title }}">
+                                <img src="{{ asset('images/spinner.gif') }}" data-src="{{ $gallery->image }}"
+                                    class="card-img-top lazyload card-img-400" alt="{{ $gallery->title }}">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $gallery->title }}</h5>
                                 </div>
@@ -19,7 +19,7 @@
                         </div>
                     @endforeach
                 </div>
-                {{ $galleries->links() }}
+                {{-- {{ $galleries->links() }} --}}
             </div>
         </div>
     </div>

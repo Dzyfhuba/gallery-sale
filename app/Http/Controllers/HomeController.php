@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
+use Dzyfhuba\PostSys\Models\Post;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -34,10 +35,12 @@ class HomeController extends Controller
             $images[] = json_decode($service->images);
             $service->images = $images;
         }
-        // dd($services[0]->images[0][0]->image);
+
+        $articles = Post::where('status', 1)->orderBy('updated_at', 'desc')->get()->take(5);
 
         return view('home', [
-            'services' => $services
+            'services' => $services,
+            'articles' => $articles,
         ]);
     }
 }

@@ -20,4 +20,10 @@ article p {
 .content {
     display: flex;
     align-items: flex-start;
+    line-height: 1.5;
+    max-height: 3;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
 }

@@ -16,11 +16,12 @@ require('./admin/command');
 import { serialize } from './serialize';
 
 import { slugify } from './slugify';
+console.log(window.location.href.includes(`${window.location.origin}`));
 if (window.location.href.includes(slugify($('title').text()).replace('-alam-rohman-garden', ''))) {
     require('./read-markdown');
 }
 
-if (window.location.href.includes(`${window.location.origin}/article`)) {
+if (window.location.href.includes(`${window.location.origin}/article`) || window.location.href.includes(`${window.location.origin}`)) {
     require('./preview-markdown');
 }
 
