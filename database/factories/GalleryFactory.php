@@ -19,11 +19,12 @@ class GalleryFactory extends Factory
      */
     public function definition()
     {
+
         $title = $this->faker->sentence;
         return [
             'title' => $title,
             'description' => $this->faker->paragraph,
-            'image' => $this->faker->image(storage_path('app/public/gallery'), 720, 480, null, false),
+            'image' => $this->faker->imageUrl(3840, 2160, 'animals', true, 'Faker', true),
         ];
     }
 }

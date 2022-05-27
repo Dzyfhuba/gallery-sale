@@ -14110,3 +14110,24 @@ article p {
 #serviceForm .image-item *:hover {
   cursor: pointer;
 }
+
+.list-horizontal {
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 25%;
+  gap: 16px;
+  overflow-x: auto;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  padding: 0 16px;
+}
+.list-horizontal .card-img-top {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.list-horizontal .more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

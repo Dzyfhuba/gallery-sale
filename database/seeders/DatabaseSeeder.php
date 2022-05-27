@@ -24,13 +24,6 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
         User::factory(25)->create();
         $this->call(PostSeeder::class);
-
-        if (!File::exists(storage_path('storage/gallery'))) {
-            Storage::makeDirectory('public/gallery', 777, true, true);
-            echo "direktori tidak ada\n";
-        } else {
-            echo "direktori sudah dibuat\n";
-        }
         Gallery::factory(100)->create();
 
         Service::factory(25)->create();

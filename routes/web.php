@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\ServiceController as AdminServiceController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -33,6 +34,8 @@ Route::controller(ArticleController::class)->name('article.')->prefix('article')
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
 
 Route::get('/contactus', [ContactUsController::class, 'index'])->name('contactus.index');
+
+Route::get('/service', [ServiceController::class, 'index'])->name('service.index');
 
 Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->group(function () {
     Route::get('/', function () {

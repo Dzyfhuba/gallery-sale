@@ -25,7 +25,7 @@
     <div id="app">
         @include('layouts.navbar')
 
-        <main class="p-3">
+        <main>
             @yield('content')
         </main>
     </div>

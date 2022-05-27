@@ -93,8 +93,8 @@
                                                 @foreach ($allImages as $image)
                                                     <div class="col">
                                                         <div class="card image-item">
-                                                            <img src="{{ asset('images/gallery/' . $image->image) }}"
-                                                                class="card-img-top" alt="...">
+                                                            <img src="{{ $image->image }}" class="card-img-top"
+                                                                alt="...">
                                                             <div
                                                                 class="card-body position-absolute w-100 h-100 d-flex justify-content-center">
                                                                 <h5 class="card-title align-self-end text-white">
@@ -102,7 +102,7 @@
                                                                 </h5>
                                                             </div>
                                                             <input type="checkbox" name="images[]" id="images"
-                                                                value="{{ asset('images/gallery/' . $image->image) }}"
+                                                                value="{{ $image->image }}"
                                                                 class="position-absolute top-0 m-2" style="right: 0">
                                                         </div>
                                                     </div>

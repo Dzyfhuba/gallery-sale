@@ -16,7 +16,6 @@
                                 <th class="d-none">Status</th>
                                 <th class="d-none">Created At</th>
                                 <th>Terakhir Diubah</th>
-                                <th>Penulis</th>
                                 <th>Ubah</th>
                                 <th>Visibilitas</th>
                                 <th>Hapus</th>
@@ -32,7 +31,6 @@
                                     <td class="d-none">{{ $service->status }}</td>
                                     <td class="d-none">{{ $service->created_at }}</td>
                                     <td>{{ $service->updated_at }}</td>
-                                    <td>{{ $service->username }}</td>
                                     <td class="text-center">
                                         <a name="edit{{ $service->id }}" id="edit{{ $service->id }}"
                                             class="btn btn-warning"

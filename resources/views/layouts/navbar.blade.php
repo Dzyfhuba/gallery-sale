@@ -17,10 +17,7 @@
             {{-- Center Side Of Navbar --}}
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="">{{ __('Jasa') }}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="">{{ __('Tukang Taman') }}</a>
+                    <a class="nav-link" href="{{ route('service.index') }}">{{ __('Jasa') }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('gallery.index') }}">{{ __('Gallery') }}</a>
@@ -61,7 +58,7 @@
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
-                                                                                     document.getElementById('logout-form').submit();">
+                                                                                             document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
 

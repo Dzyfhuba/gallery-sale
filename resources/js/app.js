@@ -2,6 +2,7 @@ require('./bootstrap');
 window.$ = window.JQuery = require('jquery');
 require('datatables.net');
 require('./tooltip');
+require('lazysizes');
 
 require('./admin/data');
 
