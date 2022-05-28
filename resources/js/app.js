@@ -12,6 +12,7 @@ if (window.location.href.includes('create') ||
 }
 
 require('./admin/command');
+require('./nav')
 
 import { serialize } from './serialize';
 
