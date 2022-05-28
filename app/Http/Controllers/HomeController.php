@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactUs;
+use App\Models\Gallery;
 use App\Models\Service;
 use Dzyfhuba\PostSys\Models\Post;
 use Illuminate\Http\Request;
@@ -38,9 +40,15 @@ class HomeController extends Controller
 
         $articles = Post::where('status', 1)->orderBy('updated_at', 'desc')->get()->take(5);
 
+        $galleries = Gallery::orderBy('updated_at', 'desc')->get()->take(5);
+
+        $contact = ContactUs::first();
+
         return view('home', [
             'services' => $services,
             'articles' => $articles,
+            'galleries' => $galleries,
+            'contact' => $contact,
         ]);
     }
 }
