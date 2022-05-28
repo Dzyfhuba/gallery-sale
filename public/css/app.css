@@ -14038,6 +14038,18 @@ footer {
   color: #777;
 }
 
+#article img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#article .img-full-width {
+  height: 80%;
+}
+@media only screen and (min-width: 767px) {
+  #article .img-half-width {
+    padding: 0;
+  }
+}
 #article .content * {
   display: flex;
   align-items: flex-start;
