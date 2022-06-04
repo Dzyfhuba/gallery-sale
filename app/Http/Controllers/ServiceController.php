@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactUs;
 use App\Models\Service;
 use Illuminate\Http\Request;
 
@@ -19,6 +20,8 @@ class ServiceController extends Controller
             $images[] = json_decode($service->images);
             $service->images = $images;
         }
-        return view('service.index', compact('services'));
+
+        $contact = ContactUs::first();
+        return view('service.index', compact('services', 'contact'));
     }
 }

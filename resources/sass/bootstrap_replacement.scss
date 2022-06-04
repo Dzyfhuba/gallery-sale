@@ -1,0 +1,26 @@
+$i: '!important';
+.bg-light {
+    background-color: $cultured $i;
+}
+
+.nav-link {
+    line-height: 50px;
+    font-size: 1.4rem;
+    padding: 0 10px;
+    &:hover {
+        box-shadow: 0 1px 0 $gunmetal;
+    }
+}
+
+hr {
+    color: $gunmetal;
+}
+
+.card {
+    background-color: $color-4;
+    border: 1px solid $caribbean-green;
+}
+
+.img-thumbnail {
+    background-color: transparent $i;
+}

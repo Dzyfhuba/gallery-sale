@@ -14036,6 +14036,7 @@ footer {
   text-align: center;
   font-size: 0.8rem;
   color: #777;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 #article img {
@@ -14178,4 +14179,69 @@ footer {
   text-decoration: none;
   font-size: 2em;
   text-align: center;
+}
+
+.bg-light {
+  background-color: #eeeeee "!important";
+}
+
+.nav-link {
+  line-height: 50px;
+  font-size: 1.4rem;
+  padding: 0 10px;
+}
+.nav-link:hover {
+  box-shadow: 0 1px 0 #242a32;
+}
+
+hr {
+  color: #242a32;
+}
+
+.card {
+  background-color: #EEEEEE;
+  border: 1px solid #4fcca3;
+}
+
+.img-thumbnail {
+  background-color: transparent "!important";
+}
+
+.direct-to-us {
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  display: block;
+  bottom: 10px;
+  left: 10px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
+}
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

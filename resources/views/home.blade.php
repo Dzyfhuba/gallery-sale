@@ -12,7 +12,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-12">
                         <section class="services mb-5">
-                            <a href="{{ route('service.index') }}" class="text-decoration-none text-black">
+                            <a href="{{ route('service.index') }}" class="text-decoration-none text-dark">
                                 <h1 class="title">Macam-macam jasa yang kami sediakan</h1>
                             </a>
                             <hr>
@@ -34,7 +34,7 @@
                             </div>
                         </section>
                         <section class="articles">
-                            <a href="{{ route('gallery.index') }}" class="text-decoration-none text-black">
+                            <a href="{{ route('gallery.index') }}" class="text-decoration-none text-dark">
                                 <h1 class="title">Artikel baru dari kami</h1>
                             </a>
                             <hr>
@@ -46,7 +46,7 @@
                                             <div class="col-md-10">
                                                 <div class="card-body">
                                                     <a href="{{ route('article.show', Str::slug($article->title)) }}"
-                                                        class="text-decoration-none text-black">
+                                                        class="text-decoration-none text-dark">
                                                         <h5 class="card-title">{{ $article->title }}</h5>
                                                     </a>
                                                     <textarea class="d-none md">{{ $article->description }}</textarea>
@@ -73,7 +73,7 @@
                             </div>
                         </section>
                         <section class="galleries">
-                            <a href="{{ route('gallery.index') }}" class="text-decoration-none text-black">
+                            <a href="{{ route('gallery.index') }}" class="text-decoration-none text-dark">
                                 <h1 class="title">Galeri foto kami</h1>
                             </a>
                             <hr>
@@ -108,11 +108,13 @@
                         <p><i class="bi bi-envelope"></i> {{ $contact->email }}</p>
                         <p>
                             <i class="bi bi-facebook"></i>
-                            <a href="{{ $contact->facebook_url }}">{{ $contact->facebook }}</a>
+                            <a href="{{ $contact->facebook_url }}"
+                                class="text-decoration-none text-dark">{{ $contact->facebook }}</a>
                         </p>
                         <p>
                             <i class="bi bi-instagram"></i>
-                            <a href="{{ $contact->instagram_url }}">{{ $contact->instagram }}</a>
+                            <a href="{{ $contact->instagram_url }}"
+                                class="text-decoration-none text-dark">{{ $contact->instagram }}</a>
                         </p>
                         <article id=address>
                             <div class="mapouter">
@@ -138,7 +140,7 @@
 
                                     </style>
                                 </div>
-                                <p>
+                                <p class="d-none">
                                     {{ $contact->address }}
                                 </p>
                         </article>

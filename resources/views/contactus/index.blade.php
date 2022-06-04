@@ -15,7 +15,7 @@
         }
 
     </style>
-    <div class="container bg-white p-4" id="contactus">
+    <div class="container bg-light p-4" id="contactus">
         <div class="row">
             <h1 id="title">{{ $contactUs->title }}</h1>
             <div class="col-md-9">

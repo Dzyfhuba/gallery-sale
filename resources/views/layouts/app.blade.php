@@ -21,15 +21,18 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-light">
     <div id="app">
         @include('layouts.navbar')
 
-        <main class="py-5">
+        <main style="margin-top: 100px">
             @yield('content')
         </main>
-
-        @include('layouts.footer')
+        {{-- if this route not login or register --}}
+        @if (!(Route::currentRouteName() == 'login' || Route::currentRouteName() == 'register'))
+            @include('layouts.direct_to_us')
+            @include('layouts.footer')
+        @endif
     </div>
 </body>
 

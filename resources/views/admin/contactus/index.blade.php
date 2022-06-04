@@ -1,7 +1,7 @@
 @extends('admin.app')
 @section('content')
-    <div class="container bg-white contactus py-4">
-        {{ Form::open(['url' => route('admin.contactus.update', $contactUs->id),'method' => 'PUT','id' => 'contactus-form']) }}
+    <div class="container bg-light contactus py-4">
+        {{ Form::open(['url' => route('admin.contactus.update', $contactUs->id), 'method' => 'PUT', 'id' => 'contactus-form']) }}
         @csrf
         <button type="submit" id="submit" class="btn btn-success mb-3 w-100 disabled" btn-lg btn-block">Save</button>
         <div class="form-floating mb-3">

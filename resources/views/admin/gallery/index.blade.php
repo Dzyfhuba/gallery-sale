@@ -33,8 +33,9 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="image">Gambar</label>
-                                        <input type="file" class="form-control" name="image" id="image"
-                                            aria-describedby="image" placeholder="Gambar..." required>
+                                        {{-- <input type="file" class="form-control" name="image" id="image"
+                                            aria-describedby="image" placeholder="Gambar..." required> --}}
+                                        <input type="text" name="image" class="form-control" placeholder="Image URL">
                                     </div>
                                 </div>
                                 <div class="modal-footer">

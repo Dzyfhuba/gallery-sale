@@ -77,7 +77,7 @@
                         aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
                             <div class="modal-content">
-                                <div class="modal-header bg-white">
+                                <div class="modal-header bg-light">
                                     <h5 class="modal-title" id="addImageModalLabel">Tambah Gambar</h5>
                                     <button type="button" class="btn btn-primary mx-auto" id="save">Save
                                         changes</button>
@@ -97,7 +97,7 @@
                                                                 alt="...">
                                                             <div
                                                                 class="card-body position-absolute w-100 h-100 d-flex justify-content-center">
-                                                                <h5 class="card-title align-self-end text-white">
+                                                                <h5 class="card-title align-self-end text-light">
                                                                     Card title
                                                                 </h5>
                                                             </div>

@@ -12,6 +12,7 @@ class ContactUsController extends Controller
         $contactUs = ContactUs::first();
         return view('contactus.index', [
             'contactUs' => $contactUs,
+            'contact' => $contactUs,
         ]);
     }
 }

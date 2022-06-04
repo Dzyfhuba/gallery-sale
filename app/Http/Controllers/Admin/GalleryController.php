@@ -41,17 +41,7 @@ class GalleryController extends Controller
      */
     public function store(StoreGalleryRequest $request)
     {
-        $custom_file_name = Str::slug($request->title) . '.' . $request->file('image')->getClientOriginalExtension();
-        if (file_exists('storage/gallery/' . $custom_file_name)) {
-            $custom_file_name = Str::slug($request->title) . '-' . time() . '.' . $request->file('image')->getClientOriginalExtension();
-        }
-        $request->file('image')->storeAs('public/gallery', $custom_file_name);
-        // dd($custom_file_name);
-        Gallery::create([
-            'title' => $request->title,
-            'description' => $request->description,
-            'image' => $custom_file_name,
-        ]);
+        $gallery = Gallery::create($request->all());
         return redirect()->route('admin.gallery.index')->with('success', 'Gallery created successfully');
     }
 

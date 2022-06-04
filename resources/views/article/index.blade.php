@@ -7,12 +7,12 @@
             @foreach ($posts as $key => $post)
                 <div class="p-3 {{ $key % 3 ? ' col-lg-6' : ' col-lg-12' }}">
                     <article id="article"
-                        class="row d-flex align-items-center bg-white border border-1 border-light shadow p-3"
+                        class="row d-flex align-items-center bg-light border border-1 border-light shadow p-3"
                         style="min-height: 200px">
                         {{ preg_match_all('/\((.*?)\)/', $post->description, $result) ? '' : '' }}
                         <textarea class="d-none md">{{ $post->description }}</textarea>
                         <a href="{{ route('article.show', Str::slug($post->title)) }}"
-                            class="text-black text-decoration-none">
+                            class="text-dark text-decoration-none">
                             <h3>{{ $post->title }}</h3>
                         </a>
                         <img style="cursor: pointer"
