@@ -1,6 +1,9 @@
 .list-vertical {
     .card {
-        height: 150px;
+        height: auto;
+        @include md-screen {
+            height: 150px;
+        }
         flex-direction: column;
         .img-thumbnail {
             height: 150px;

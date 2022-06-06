@@ -2,11 +2,24 @@
     position: relative;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 25%;
+    grid-auto-columns: 100%;
+    @include sm-screen {
+        grid-auto-columns: 50%;
+    }
+    @include md-screen {
+        grid-auto-columns: 33%;
+    }
+    @include lg-screen {
+        grid-auto-columns: 25%;
+    }
     gap: 16px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    // smooth scroll snap
     padding: 0 16px;
+    .card {
+        scroll-snap-align: center;
+    }
     .card-img-top {
         object-fit: cover;
     }
