@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Models\ContactUs;
 use App\Models\Gallery;
 use App\Models\Service;
@@ -38,7 +39,9 @@ class HomeController extends Controller
             $service->images = $images;
         }
 
-        $articles = Post::where('status', 1)->orderBy('updated_at', 'desc')->get()->take(5);
+        dd($services);
+
+        $articles = Article::where('status', 1)->orderBy('updated_at', 'desc')->get()->take(5);
 
         $galleries = Gallery::orderBy('updated_at', 'desc')->get()->take(5);
 

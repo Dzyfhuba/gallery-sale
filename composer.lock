@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3543c4de2fcf09cf8bf48ad497cc4651",
+    "content-hash": "f2a2e7eba02ae0db48a8cc1dd2dc6008",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -424,61 +424,6 @@
                 }
             ],
             "time": "2022-01-18T15:43:28+00:00"
-        },
-        {
-            "name": "dzyfhuba/laravel-post-system",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Dzyfhuba/laravel-post-system.git",
-                "reference": "37a86d559900862574c2e0c67f340055fa63197d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Dzyfhuba/laravel-post-system/zipball/37a86d559900862574c2e0c67f340055fa63197d",
-                "reference": "37a86d559900862574c2e0c67f340055fa63197d",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Dzyfhuba\\PostSys\\PostSystemServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Dzyfhuba\\PostSys\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Hafidz Ubaidillah",
-                    "email": "hafidz21ub@gmail.com"
-                }
-            ],
-            "description": "Post, Comment, Like and Reply.",
-            "keywords": [
-                "comments",
-                "laravel",
-                "lie",
-                "posts",
-                "replies"
-            ],
-            "support": {
-                "issues": "https://github.com/Dzyfhuba/laravel-post-system/issues",
-                "source": "https://github.com/Dzyfhuba/laravel-post-system/tree/main"
-            },
-            "time": "2022-02-10T16:45:42+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -8134,9 +8079,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "dzyfhuba/laravel-post-system": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

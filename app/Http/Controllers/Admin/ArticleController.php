@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Article;
 use App\Models\User;
-use Dzyfhuba\PostSys\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
@@ -18,19 +18,11 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $posts = Post::join('users', 'posts.user_id', '=', 'users.id')
-            ->select(
-                'posts.id',
-                'posts.title',
-                'posts.status',
-                'posts.created_at',
-                'posts.updated_at',
-                'users.username'
-            )
-            ->get();
-        return view('admin.article.index', [
-            'posts' => $posts,
-        ]);
+        $articles = Article::join('users', 'users.id', '=', 'articles.user_id')
+            ->select('articles.*', 'users.name as user_name')
+            ->orderBy('created_at', 'desc')->get();
+
+        return view('admin.article.index', compact('articles'));
     }
 
     /**
@@ -51,13 +43,27 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        $user = User::find(Auth::user()->id);
-        $post = Post::create($request->all());
-        $user->assignPost($post);
-        return redirect()->route('admin.article.index')->with([
-            'status' => 'success',
-            'message' => $post->title . 'article created successfully!'
+        // dd($request);
+
+        // move images to public/images
+        $images = $request->file('images');
+        $images_path = [];
+        foreach ($images as $image) {
+            $image_path = $image->store('images');
+            array_push($images_path, $image_path);
+        }
+
+        $article = Article::create([
+            'user_id' => Auth::id(),
+            'title' => $request->title,
+            'slug' => Str::slug($request->title),
+            'content' => $request->content,
+            'images' => json_encode($images_path),
+            'tags' => $request->tags,
+            'status' => $request->status,
         ]);
+
+        return redirect()->route('admin.article.index');
     }
 
     /**
@@ -68,11 +74,8 @@ class ArticleController extends Controller
      */
     public function show($title)
     {
-        $title = Str::title(str_replace('-', ' ', $title));
-        $post = Post::where('title', $title)->first();
-        return view('admin.article.show', [
-            'post' => $post
-        ]);
+        $article = Article::where('slug', $title)->first();
+        return view('admin.article.show', compact('article'));
     }
 
     /**

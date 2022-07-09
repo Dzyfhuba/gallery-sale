@@ -26,13 +26,12 @@
         .toastui-editor-popup-add-image .tab-item:first {
             display: none;
         }
-
     </style>
 </head>
 
 <body>
     {{-- Navbar --}}
-    <form action="{{ route('admin.article.store') }}" method="post" id="article-form">
+    <form action="{{ route('admin.article.store') }}" method="post" id="article-form" enctype="multipart/form-data">
         @csrf
         <nav class="navbar navbar-expand-lg navbar-light bg-b-light">
             <div class="container-fluid">
@@ -68,8 +67,12 @@
         <div class="container-fluid pt-2">
             <div class="card">
                 <div class="card-body">
-                    <textarea name="description" id="description" class="d-none"></textarea>
+                    <textarea name="content" id="md" class="d-none"></textarea>
                     <div id="area" class="bg-light"></div>
+                    <div class="">
+                        <input type="file" class="form-control" name="images[]" id="images" placeholder="Lampiran"
+                            aria-describedby="lampiran" multiple required>
+                    </div>
                 </div>
             </div>
         </div>
